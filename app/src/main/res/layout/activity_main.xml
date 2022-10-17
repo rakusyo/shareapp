@@ -1,0 +1,836 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_centerHorizontal="true"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <ScrollView
+        android:id="@+id/vertical_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="信息填写"
+            android:layout_marginBottom="@dimen/dp56px"
+            android:layout_marginTop="@dimen/dp30px"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textSize="@dimen/dp54px" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#E6E6FA"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dp25px"
+            android:paddingTop="@dimen/dp20px"
+            android:paddingRight="25px">
+//日期框类 imageview0-7 textview 1-12 k1-4 文字框顺序是 1 3 2
+          <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp400px"
+                android:background="@drawable/shadow"
+                android:elevation="@dimen/dp5px"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/k1"
+                    android:onClick="onClick"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp100px"
+                    android:background="@drawable/xk">
+
+
+                    <ImageView
+                        android:id="@+id/imageview"
+                        android:layout_width="@dimen/dp48px"
+                        android:layout_height="@dimen/dp48px"
+                        android:layout_marginBottom="@dimen/dp26px"
+                        app:layout_constraintBottom_toBottomOf="@id/k1"
+                        app:layout_constraintLeft_toLeftOf="@id/k1"
+                        app:srcCompat="@drawable/date" />
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp55px"
+                        android:layout_marginLeft="@dimen/dp10px"
+                        android:lineSpacingExtra="0px"
+
+                        android:text="日期"
+                        android:textColor="#111111"
+                        android:textSize="@dimen/dp48px"
+                        app:layout_constraintBottom_toBottomOf="@id/imageview"
+                        app:layout_constraintLeft_toRightOf="@id/imageview" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp43px"
+                        android:layout_marginLeft="@dimen/dp10px"
+                        android:lineSpacingExtra="0px"
+
+                        android:text=""
+                        android:textColor="#708ef1"
+                        android:textSize="@dimen/dp36px"
+                        app:layout_constraintBottom_toBottomOf="@id/imageview"
+                        app:layout_constraintLeft_toRightOf="@id/textView1" />
+
+                    <LinearLayout
+                        android:id="@+id/l1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp26px"
+
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="@id/k1"
+                        app:layout_constraintRight_toRightOf="@id/k1">
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="@dimen/dp42px"
+                            android:layout_marginRight="@dimen/dp10px"
+                            android:text="请点击输入"
+                            android:textAlignment="center"
+                            android:textColor="#999999"
+                            android:textSize="@dimen/dp36px"
+                            app:layout_constraintBottom_toBottomOf="@id/imageView2"
+                            app:layout_constraintRight_toLeftOf="@id/imageView2" />
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="@dimen/dp36px"
+                            android:layout_height="@dimen/dp36px"
+                            android:layout_marginTop="@dimen/dp7px"
+                            app:layout_constraintBottom_toBottomOf="@id/k1"
+                            app:layout_constraintRight_toRightOf="@id/k1"
+                            app:srcCompat="@drawable/r" />
+
+
+
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/k2"
+                    android:layout_width="match_parent"
+                    android:onClick="onClick"
+                    android:layout_height="@dimen/dp100px"
+                    android:background="@drawable/xk">
+
+
+                    <ImageView
+                        android:id="@+id/imageview2"
+                        android:layout_width="@dimen/dp48px"
+                        android:layout_height="@dimen/dp48px"
+                        android:layout_marginBottom="@dimen/dp26px"
+                        app:layout_constraintBottom_toBottomOf="@id/k2"
+                        app:layout_constraintLeft_toLeftOf="@id/k2"
+                        app:srcCompat="@drawable/ck" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp55px"
+                        android:layout_marginLeft="@dimen/dp10px"
+                        android:lineSpacingExtra="0px"
+
+                        android:text="订仓号"
+                        android:textColor="#111111"
+                        android:textSize="@dimen/dp48px"
+                        app:layout_constraintBottom_toBottomOf="@id/imageview2"
+                        app:layout_constraintLeft_toRightOf="@id/imageview2" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp43px"
+                        android:layout_marginLeft="@dimen/dp10px"
+                        android:lineSpacingExtra="0px"
+
+                        android:text="(选填)"
+                        android:textColor="#708ef1"
+                        android:textSize="@dimen/dp36px"
+                        app:layout_constraintBottom_toBottomOf="@id/imageview2"
+                        app:layout_constraintLeft_toRightOf="@id/textView4" />
+
+                    <LinearLayout
+                        android:id="@+id/l2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp26px"
+
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="@id/k2"
+                        app:layout_constraintRight_toRightOf="@id/k2">
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp42px"
+                            android:layout_marginRight="@dimen/dp10px"
+
+
+                            android:text="请点击输入"
+                            android:textAlignment="center"
+                            android:textColor="#999999"
+                            android:textSize="@dimen/dp36px"
+                            app:layout_constraintBottom_toBottomOf="@id/imageview3"
+                            app:layout_constraintRight_toLeftOf="@id/imageview3" />
+
+                        <ImageView
+                            android:id="@+id/imageview3"
+                            android:layout_width="@dimen/dp36px"
+                            android:layout_height="@dimen/dp36px"
+                            android:layout_marginTop="@dimen/dp7px"
+                            app:layout_constraintBottom_toBottomOf="@id/k2"
+                            app:layout_constraintRight_toRightOf="@id/k2"
+                            app:srcCompat="@drawable/r" />
+
+
+
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/k3"
+                    android:layout_width="match_parent"
+                    android:onClick="onClick"
+                    android:layout_height="@dimen/dp100px"
+                    android:background="@drawable/xk">
+
+
+                    <ImageView
+                        android:id="@+id/imageview4"
+                        android:layout_width="@dimen/dp48px"
+                        android:layout_height="@dimen/dp48px"
+                        android:layout_marginBottom="@dimen/dp26px"
+                        app:layout_constraintBottom_toBottomOf="@id/k3"
+                        app:layout_constraintLeft_toLeftOf="@id/k3"
+                        app:srcCompat="@drawable/gz" />
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp55px"
+                        android:layout_marginLeft="@dimen/dp10px"
+                        android:lineSpacingExtra="0px"
+
+                        android:text="柜号"
+                        android:textColor="#111111"
+                        android:textSize="@dimen/dp48px"
+                        app:layout_constraintBottom_toBottomOf="@id/imageview4"
+                        app:layout_constraintLeft_toRightOf="@id/imageview4" />
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp43px"
+                        android:layout_marginLeft="@dimen/dp10px"
+                        android:lineSpacingExtra="0px"
+
+                        android:text=""
+                        android:textColor="#708ef1"
+                        android:textSize="@dimen/dp36px"
+                        app:layout_constraintBottom_toBottomOf="@id/imageview4"
+                        app:layout_constraintLeft_toRightOf="@id/textView7" />
+
+                    <LinearLayout
+                        android:id="@+id/l3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp26px"
+
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="@id/k3"
+                        app:layout_constraintRight_toRightOf="@id/k3">
+
+                        <TextView
+                            android:id="@+id/textView8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp42px"
+                            android:layout_marginRight="@dimen/dp10px"
+
+
+                            android:text="请点击输入"
+                            android:textAlignment="center"
+                            android:textColor="#999999"
+                            android:textSize="@dimen/dp36px"
+                            app:layout_constraintBottom_toBottomOf="@id/imageview5"
+                            app:layout_constraintRight_toLeftOf="@id/imageview5" />
+
+                        <ImageView
+                            android:id="@+id/imageview5"
+                            android:layout_width="@dimen/dp36px"
+                            android:layout_height="@dimen/dp36px"
+                            android:layout_marginTop="@dimen/dp7px"
+                            app:layout_constraintBottom_toBottomOf="@id/k3"
+                            app:layout_constraintRight_toRightOf="@id/k3"
+                            app:srcCompat="@drawable/r" />
+
+
+
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/k4"
+                    android:layout_width="match_parent"
+                    android:onClick="onClick"
+                    android:layout_height="@dimen/dp100px"
+                    android:background="@drawable/xk">
+
+
+                    <ImageView
+                        android:id="@+id/imageview6"
+                        android:layout_width="@dimen/dp48px"
+                        android:layout_height="@dimen/dp48px"
+                        android:layout_marginBottom="@dimen/dp26px"
+                        app:layout_constraintBottom_toBottomOf="@id/k4"
+                        app:layout_constraintLeft_toLeftOf="@id/k4"
+                        app:srcCompat="@drawable/s" />
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp55px"
+                        android:layout_marginLeft="@dimen/dp10px"
+                        android:lineSpacingExtra="0px"
+
+                        android:text="封条号"
+                        android:textColor="#111111"
+                        android:textSize="@dimen/dp48px"
+                        app:layout_constraintBottom_toBottomOf="@id/imageview6"
+                        app:layout_constraintLeft_toRightOf="@id/imageview6" />
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp43px"
+                        android:layout_marginLeft="@dimen/dp10px"
+                        android:lineSpacingExtra="0px"
+
+                        android:text="(选填)"
+                        android:textColor="#708ef1"
+                        android:textSize="@dimen/dp36px"
+                        app:layout_constraintBottom_toBottomOf="@id/imageview6"
+                        app:layout_constraintLeft_toRightOf="@id/textView10" />
+
+                    <LinearLayout
+                        android:id="@+id/l4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp26px"
+
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="@id/k4"
+                        app:layout_constraintRight_toRightOf="@id/k4">
+
+                        <TextView
+                            android:id="@+id/textView11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp42px"
+                            android:layout_marginRight="@dimen/dp10px"
+
+
+                            android:text="请点击输入"
+                            android:textAlignment="center"
+                            android:textColor="#999999"
+                            android:textSize="@dimen/dp36px"
+                            app:layout_constraintBottom_toBottomOf="@id/imageview7"
+                            app:layout_constraintRight_toLeftOf="@id/imageview7" />
+
+                        <ImageView
+                            android:id="@+id/imageview7"
+                            android:layout_width="@dimen/dp36px"
+                            android:layout_height="@dimen/dp36px"
+                            android:layout_marginTop="@dimen/dp7px"
+                            app:layout_constraintBottom_toBottomOf="@id/k4"
+                            app:layout_constraintRight_toRightOf="@id/k4"
+                            app:srcCompat="@drawable/r" />
+
+
+
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+//运输路线框类 ysi(图)1-4 yst(文字框)1-6   k5 文字框顺序1 2 3
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp430px"
+                android:layout_marginTop="@dimen/dp30px"
+                android:background="@drawable/shadow"
+                android:elevation="@dimen/dp5px"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/k5"
+                    android:onClick="typeSizeClick"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp100px"
+                    android:background="@drawable/xk">
+
+
+                    <ImageView
+                        android:id="@+id/ysi1"
+                        android:layout_width="@dimen/dp48px"
+                        android:layout_height="@dimen/dp48px"
+                        android:layout_marginBottom="@dimen/dp26px"
+                        app:layout_constraintBottom_toBottomOf="@id/k5"
+                        app:layout_constraintLeft_toLeftOf="@id/k5"
+                        app:srcCompat="@drawable/lx" />
+
+                    <TextView
+                        android:id="@+id/yst1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp55px"
+                        android:layout_marginLeft="@dimen/dp10px"
+                        android:lineSpacingExtra="0px"
+
+                        android:text="运输路线"
+                        android:textColor="#111111"
+                        android:textSize="@dimen/dp48px"
+                        app:layout_constraintBottom_toBottomOf="@id/ysi1"
+                        app:layout_constraintLeft_toRightOf="@id/ysi1" />
+
+                    <TextView
+                        android:id="@+id/yst2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp43px"
+                        android:layout_marginLeft="@dimen/dp10px"
+                        android:lineSpacingExtra="0px"
+
+                        android:text=""
+                        android:textColor="#708ef1"
+                        android:textSize="@dimen/dp36px"
+                        app:layout_constraintBottom_toBottomOf="@id/ysi1"
+                        app:layout_constraintLeft_toRightOf="@id/yst1" />
+
+                    <LinearLayout
+                        android:id="@+id/l5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp26px"
+
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="@id/k5"
+                        app:layout_constraintRight_toRightOf="@id/k5">
+
+                        <TextView
+                            android:id="@+id/yst3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp42px"
+                            android:layout_marginRight="@dimen/dp10px"
+
+
+                            android:text="请点击输入"
+                            android:textAlignment="center"
+                            android:textColor="#999999"
+                            android:textSize="@dimen/dp36px"
+                            app:layout_constraintBottom_toBottomOf="@id/ysi2"
+                            app:layout_constraintRight_toLeftOf="@id/ysi2" />
+
+                        <ImageView
+                            android:id="@+id/ysi2"
+                            android:layout_width="@dimen/dp36px"
+                            android:layout_height="@dimen/dp36px"
+                            android:layout_marginTop="@dimen/dp7px"
+                            app:layout_constraintBottom_toBottomOf="@id/k5"
+                            app:layout_constraintRight_toRightOf="@id/k5"
+                            app:srcCompat="@drawable/r" />
+
+
+
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp316px"
+                    android:orientation="vertical">
+
+
+  //出发地           <TextView
+                        android:id="@+id/yst4"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp56px"
+                        android:textSize="@dimen/dp48px"
+                        android:onClick="onClick"
+                        android:padding="0px"
+                        android:textColor="#999999"
+                        android:gravity="center"
+                        android:text="提柜地待输入" />
+
+                    <ImageView
+                        android:id="@+id/ysi3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp64px"
+                        app:srcCompat="@drawable/down" />
+
+   //路途                 <TextView
+                        android:id="@+id/yst5"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp56px"
+                        android:textSize="@dimen/dp48px"
+                        android:onClick="onClick"
+                        android:padding="0px"
+                        android:textColor="#999999"
+                        android:gravity="center"
+                        android:text="装货地待输入" />
+
+                    <ImageView
+                        android:id="@+id/ysi4"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp64px"
+                        app:srcCompat="@drawable/down" />
+
+  //还柜点                  <TextView
+                        android:id="@+id/yst6"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp58px"
+                        android:textSize="@dimen/dp48px"
+                        android:onClick="onClick"
+                        android:padding="0px"
+                        android:textColor="#999999"
+                        android:gravity="center"
+                        android:text="还柜地待输入" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+//打单 过磅费栏 zai(图) zat(文字框) k6,7 文字框顺序1 2 3
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp202px"
+                android:layout_marginTop="@dimen/dp30px"
+                android:background="@drawable/shadow"
+                android:elevation="@dimen/dp5px"
+                android:orientation="vertical">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/k6"
+                    android:onClick="onClick"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp100px"
+                    android:background="@drawable/xk">
+
+
+                    <ImageView
+                        android:id="@+id/zai1"
+                        android:layout_width="@dimen/dp48px"
+                        android:layout_height="@dimen/dp48px"
+                        android:layout_marginBottom="@dimen/dp26px"
+                        app:layout_constraintBottom_toBottomOf="@id/k6"
+                        app:layout_constraintLeft_toLeftOf="@id/k6"
+                        app:srcCompat="@drawable/money" />
+
+                    <TextView
+                        android:id="@+id/zat1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp55px"
+                        android:layout_marginLeft="@dimen/dp10px"
+                        android:lineSpacingExtra="@dimen/dp0px"
+
+                        android:text="打单费"
+                        android:textColor="#111111"
+                        android:textSize="@dimen/dp48px"
+                        app:layout_constraintBottom_toBottomOf="@id/zai1"
+                        app:layout_constraintLeft_toRightOf="@id/zai1" />
+
+                    <TextView
+                        android:id="@+id/zat2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp43px"
+                        android:layout_marginLeft="@dimen/dp10px"
+                        android:lineSpacingExtra="@dimen/dp0px"
+
+                        android:text=""
+                        android:textColor="#708ef1"
+                        android:textSize="@dimen/dp36px"
+                        app:layout_constraintBottom_toBottomOf="@id/zai1"
+                        app:layout_constraintLeft_toRightOf="@id/zat1" />
+
+                    <LinearLayout
+                        android:id="@+id/l6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp26px"
+
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="@id/k6"
+                        app:layout_constraintRight_toRightOf="@id/k6">
+
+                        <TextView
+                            android:id="@+id/zat3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp42px"
+                            android:layout_marginRight="@dimen/dp10px"
+
+
+                            android:text="请点击选择"
+                            android:textAlignment="center"
+                            android:textColor="#999999"
+                            android:textSize="@dimen/dp36px"
+                            app:layout_constraintBottom_toBottomOf="@id/zai2"
+                            app:layout_constraintRight_toLeftOf="@id/zai2" />
+
+                        <ImageView
+                            android:id="@+id/zai2"
+                            android:layout_width="@dimen/dp36px"
+                            android:layout_height="@dimen/dp36px"
+                            android:layout_marginTop="@dimen/dp7px"
+                            app:layout_constraintBottom_toBottomOf="@id/k6"
+                            app:layout_constraintRight_toRightOf="@id/k6"
+                            app:srcCompat="@drawable/r" />
+
+
+
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/k7"
+                    android:onClick="onClick"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp100px"
+                    android:background="@drawable/xk">
+
+
+                    <ImageView
+                        android:id="@+id/zai3"
+                        android:layout_width="@dimen/dp48px"
+                        android:layout_height="@dimen/dp48px"
+                        android:layout_marginBottom="@dimen/dp26px"
+                        app:layout_constraintBottom_toBottomOf="@id/k7"
+                        app:layout_constraintLeft_toLeftOf="@id/k7"
+                        app:srcCompat="@drawable/weight" />
+
+                    <TextView
+                        android:id="@+id/zat4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp55px"
+                        android:layout_marginLeft="@dimen/dp10px"
+                        android:lineSpacingExtra="0px"
+
+                        android:text="过磅费"
+                        android:textColor="#111111"
+                        android:textSize="@dimen/dp48px"
+                        app:layout_constraintBottom_toBottomOf="@id/zai3"
+                        app:layout_constraintLeft_toRightOf="@id/zai3" />
+
+                    <TextView
+                        android:id="@+id/zat5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp43px"
+                        android:layout_marginLeft="@dimen/dp10px"
+                        android:lineSpacingExtra="0px"
+
+                        android:text=""
+                        android:textColor="#708ef1"
+                        android:textSize="@dimen/dp36px"
+                        app:layout_constraintBottom_toBottomOf="@id/zai3"
+                        app:layout_constraintLeft_toRightOf="@id/zat4" />
+
+                    <LinearLayout
+                        android:id="@+id/l7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp26px"
+
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="@id/k7"
+                        app:layout_constraintRight_toRightOf="@id/k7">
+
+                        <TextView
+                            android:id="@+id/zat6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp42px"
+                            android:layout_marginRight="@dimen/dp10px"
+
+
+                            android:text="请点击输入"
+                            android:textAlignment="center"
+                            android:textColor="#999999"
+                            android:textSize="@dimen/dp36px"
+                            app:layout_constraintBottom_toBottomOf="@id/zai4"
+                            app:layout_constraintRight_toLeftOf="@id/zai4" />
+
+                        <ImageView
+                            android:id="@+id/zai4"
+                            android:layout_width="@dimen/dp36px"
+                            android:layout_height="@dimen/dp36px"
+                            android:layout_marginTop="@dimen/dp7px"
+                            app:layout_constraintBottom_toBottomOf="@id/k7"
+                            app:layout_constraintRight_toRightOf="@id/k7"
+                            app:srcCompat="@drawable/r" />
+
+
+
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+//备注栏
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp248px"
+                android:layout_marginTop="@dimen/dp30px"
+
+                android:background="@drawable/shadow"
+                android:elevation="@dimen/dp5px"
+                android:orientation="vertical">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/k8"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp100px"
+                    android:background="@drawable/xk">
+
+
+                    <ImageView
+                        android:id="@+id/bzi1"
+                        android:layout_width="@dimen/dp48px"
+                        android:layout_height="@dimen/dp48px"
+                        android:layout_marginBottom="@dimen/dp26px"
+                        app:layout_constraintBottom_toBottomOf="@id/k8"
+                        app:layout_constraintLeft_toLeftOf="@id/k8"
+                        app:srcCompat="@drawable/bz" />
+
+                    <TextView
+                        android:id="@+id/bzt1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp55px"
+                        android:layout_marginLeft="@dimen/dp10px"
+                        android:lineSpacingExtra="@dimen/dp0px"
+                        android:text="备注"
+                        android:textColor="#111111"
+                        android:textSize="@dimen/dp48px"
+                        app:layout_constraintBottom_toBottomOf="@id/bzi1"
+                        app:layout_constraintLeft_toRightOf="@id/bzi1" />
+
+                    <TextView
+                        android:id="@+id/bzt2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp43px"
+                        android:layout_marginLeft="@dimen/dp10px"
+                        android:lineSpacingExtra="@dimen/dp0px"
+
+                        android:text=""
+                        android:textColor="#708ef1"
+                        android:textSize="@dimen/dp36px"
+                        app:layout_constraintBottom_toBottomOf="@id/bzi1"
+                        app:layout_constraintLeft_toRightOf="@id/bzt1" />
+
+                    <LinearLayout
+                        android:id="@+id/l8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp26px"
+
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="@id/k8"
+                        app:layout_constraintRight_toRightOf="@id/k8">
+
+                        <TextView
+                            android:id="@+id/bzt3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp42px"
+                            android:layout_marginRight="@dimen/dp10px"
+
+
+                            android:text="请点击输入"
+                            android:textAlignment="center"
+                            android:textColor="#999999"
+                            android:textSize="@dimen/dp36px"
+                            app:layout_constraintBottom_toBottomOf="@id/bzi2"
+                            app:layout_constraintRight_toLeftOf="@id/bzi2" />
+
+                        <ImageView
+                            android:id="@+id/bzi2"
+                            android:layout_width="@dimen/dp36px"
+                            android:layout_height="@dimen/dp36px"
+                            android:layout_marginTop="@dimen/dp7px"
+                            app:layout_constraintBottom_toBottomOf="@id/k8"
+                            app:layout_constraintRight_toRightOf="@id/k8"
+                            app:srcCompat="@drawable/r" />
+
+
+
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:id="@+id/bzsrl"
+                        android:layout_height="@dimen/dp146px"
+                        android:background="@color/white"
+                        android:paddingTop="@dimen/dp2px"
+                        android:maxLength="50"
+
+                        android:maxLines="3"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+//报错信息栏 errortext
+            <TextView
+                android:id="@+id/errortext"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp100px"
+                android:textSize="@dimen/dp36px"
+                android:textColor="#d45555"
+                android:gravity="center"
+                android:text="*请至少填写好日期柜号，再提交" />
+//提交按钮
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp100px"
+                android:onClick="onClick"
+                android:textSize="@dimen/dp48px"
+                android:padding="0px"
+                android:text="确认提交" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+    <androidx.constraintlayout.widget.Group
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</androidx.constraintlayout.widget.ConstraintLayout>
